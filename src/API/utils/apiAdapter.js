@@ -18,7 +18,7 @@ const addResponseTimeHeader = (res) => {
   }
 }
 
-const apiAdapter = (baseURL) => {
+const apiAdapter = (baseURL = 'http://localhost:8080') => {
   const api = axios.create({ baseURL })
   
   api.interceptors.request.use((request) => {
